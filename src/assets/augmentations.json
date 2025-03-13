@@ -1,0 +1,80 @@
+{
+  "augmentations": {
+    "arm": [
+      {
+        "name": "Pneumatic Arm Enhancement",
+        "description": "Unleash the power of industry itself! With the Pneumatic Arm Enhancement, lift like a titan, strike like a locomotive, and show the world what progress truly means",
+        "mechanics": "You gain an additional clockwork limb that cannot wield weapons or shields but can hold objects, perform simple tasks, and grants advantage on Dexterity (Sleight of Hand) checks. This limb can also be used for tasks such as climbing or manipulating small objects",
+        "Overcharge": "For 1 minute, your Strength score increases by an additional +4 (to a maximum of 24), and you deal an extra 1d6 force damage on melee weapon attacks. After overcharging, you suffer one level of exhaustion.",
+        "cost": 5000,
+        "SPU Usage": 5,
+        "image": "pneumatic_arm_enhancment.png"
+      },
+      {
+        "name": "Pneumatic Arm Enhancement 2",
+        "description": "Unleash the power of industry itself! With the Pneumatic Arm Enhancement, lift like a titan, strike like a locomotive, and show the world what progress truly means",
+        "mechanics": "You gain an additional clockwork limb that cannot wield weapons or shields but can hold objects, perform simple tasks, and grants advantage on Dexterity (Sleight of Hand) checks. This limb can also be used for tasks such as climbing or manipulating small objects",
+        "Overcharge": "For 1 minute, your Strength score increases by an additional +4 (to a maximum of 24), and you deal an extra 1d6 force damage on melee weapon attacks. After overcharging, you suffer one level of exhaustion.",
+        "cost": 5000,
+        "SPU Usage": 5,
+        "image": "pneumatic_arm_enhancment.png"
+      }  
+    ],
+    "leg": [
+      {
+        "name": "Limb Lockbox",
+        "description": "Keep the precious things safe inside you. Store your items in a shielded leg or arm compartment today!",
+        "mechanics": "You can store one item weighing up to 5 pounds inside a concealed compartment. Retrieving or stowing the item requires an action.",
+        "Overcharge": "None",
+        "cost": 1500,
+        "SPU Usage": 2,
+        "image": "dleg.png"
+      },
+      {
+        "name": "Limb Lockbox1",
+        "description": "Keep the precious things safe inside you. Store your items in a shielded leg or arm compartment today!",
+        "mechanics": "You can store one item weighing up to 5 pounds inside a concealed compartment. Retrieving or stowing the item requires an action.",
+        "Overcharge": "None",
+        "cost": 1500,
+        "SPU Usage": 2,
+        "image": "dleg.png"
+      },
+      {
+        "name": "Limb Lockbox2",
+        "description": "Keep the precious things safe inside you. Store your items in a shielded leg or arm compartment today!",
+        "mechanics": "You can store one item weighing up to 5 pounds inside a concealed compartment. Retrieving or stowing the item requires an action.",
+        "Overcharge": "None",
+        "cost": 1500,
+        "SPU Usage": 2,
+        "image": "dleg.png"
+      },
+      {
+        "name": "Limb Lockbox3",
+        "description": "Keep the precious things safe inside you. Store your items in a shielded leg or arm compartment today!",
+        "mechanics": "You can store one item weighing up to 5 pounds inside a concealed compartment. Retrieving or stowing the item requires an action.",
+        "Overcharge": "None",
+        "cost": 1500,
+        "SPU Usage": 2,
+        "image": "dleg.png"
+      },
+      {
+        "name": "Limb Lockbox4",
+        "description": "Keep the precious things safe inside you. Store your items in a shielded leg or arm compartment today!",
+        "mechanics": "You can store one item weighing up to 5 pounds inside a concealed compartment. Retrieving or stowing the item requires an action.",
+        "Overcharge": "None",
+        "cost": 1500,
+        "SPU Usage": 2,
+        "image": "dleg.png"
+      },
+      {
+        "name": "Limb Lockbox5",
+        "description": "Keep the precious things safe inside you. Store your items in a shielded leg or arm compartment today!",
+        "mechanics": "You can store one item weighing up to 5 pounds inside a concealed compartment. Retrieving or stowing the item requires an action.",
+        "Overcharge": "None",
+        "cost": 1500,
+        "SPU Usage": 2,
+        "image": "dleg.png"
+      }
+    ]
+  }
+}
