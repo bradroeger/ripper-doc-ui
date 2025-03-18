@@ -1,0 +1,88 @@
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  text-align: center;
+  font-family: "manbow", serif;
+  color: rgb(255, 223, 158);
+  text-shadow: 1px 1px 2px rgb(233, 199, 10), 0 0 0.5em rgb(252, 215, 53);
+  pointer-events: none;
+  /* Prevent clicks from affecting it */
+}
+
+.bodyContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  overflow: hidden;
+}
+
+.scrollContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: url("../../public/assets/ScrollBack.png") no-repeat center center;
+  top: 5%;
+}
+
+.buttonContainer {
+  position: absolute;
+  left: -50px;
+  /* Moves buttons further left */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -20px;
+  /* Reduces space between buttons */
+}
+
+.arrowBtn {
+  background: none;
+  border: none;
+  top: 10px;
+  cursor: pointer;
+  width: 198px;
+  /* Match the image size */
+  height: 260px;
+  transform: rotate(90deg);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 9px;
+  background: black;
+  color: rgb(255, 223, 158);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  size: 5%;
+}
+
+.itemImage {
+  height: 90%;
+  object-fit: contain;
+}
+
+.arrowImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transform: rotate(180deg);
+}

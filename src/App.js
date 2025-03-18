@@ -4,14 +4,12 @@ import ShopPage from "./pages/ShopPage";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<BodyMap />} />
-          <Route path="/:part" element={<ShopPage />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<BodyMap />} />
+        <Route path="/:part" element={<ShopPage />} />
+      </Routes>
+    </Router>
   );
 }
 
