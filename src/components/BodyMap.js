@@ -1,57 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 import augmentationsData from "../assets/augmentations.json";
-
-const BodyImage = styled(motion.img)`
-  width: 90vw;
-  height: auto;
-  max-height: 90vh;
-  transition: transform 0.5s ease-in-out;
-`;
-
-const ClickableImage = styled(motion.img)`
-  position: absolute;
-  cursor: pointer;
-  transition: opacity 0.5s, transform 0.3s;
-
-  &:hover {
-    opacity: 0.8;
-  }
-`;
-
-const ShopContainer = styled(motion.div)`
-  position: absolute;
-  top: 10%;
-  ${({ position }) => (position === "left" ? "left: 5%;" : "right: 5%;")}
-  width: 40vw;
-  height: 80vh;
-  background: url("/assets/shopB.png") no-repeat center center;
-  background-size: cover;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-const ItemCard = styled(motion.div)`
-  position: absolute;
-  width: 80%;
-  height: 24%; /* Ensuring consistent height */
-  background: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
-  padding-left: 10px;
-  transform-origin: center;
-  font-size: 0.9em;
-  z-index: ${({ active }) =>
-    active ? 10 : 1}; /* Bring active item to front */
-`;
 
 /**
  * ✅ Configurable Zoom Positions
@@ -105,7 +54,8 @@ const BodyMap = () => {
 
   return (
     <div className="bodyContainer">
-      <BodyImage
+      <motion.img
+        className="bodyImage"
         src="/assets/statue.png"
         alt="Body"
         animate={
@@ -116,7 +66,8 @@ const BodyMap = () => {
 
       {/* Clickable Images */}
       {!hiddenParts["head"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "6%",
@@ -128,7 +79,8 @@ const BodyMap = () => {
         />
       )}
       {!hiddenParts["hand"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "18%",
@@ -140,7 +92,8 @@ const BodyMap = () => {
         />
       )}
       {!hiddenParts["uppertorso"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "21%",
@@ -152,7 +105,8 @@ const BodyMap = () => {
         />
       )}
       {!hiddenParts["lowertorso"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "35%",
@@ -164,7 +118,8 @@ const BodyMap = () => {
         />
       )}
       {!hiddenParts["leg"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "50%",
@@ -176,7 +131,8 @@ const BodyMap = () => {
         />
       )}
       {!hiddenParts["feet"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "85%",
@@ -188,7 +144,8 @@ const BodyMap = () => {
         />
       )}
       {!hiddenParts["arm"] && (
-        <ClickableImage
+        <motion.img
+          className="clickableImage"
           src="/assets/Select-Box.png"
           style={{
             top: "22%",
@@ -201,7 +158,7 @@ const BodyMap = () => {
       )}
 
       {zoomedPart && (
-        <ShopContainer position={shopPosition}>
+        <motion.div className="shopContainer" position={shopPosition}>
           <button className="closeBtn" onClick={closeShop}>
             X
           </button>
@@ -257,8 +214,9 @@ const BodyMap = () => {
               }
 
               return (
-                <ItemCard
+                <motion.div
                   key={index}
+                  className="itemCard"
                   size={size}
                   active={relativeIndex === 0} // Pass active state for styling
                   animate={{
@@ -289,7 +247,7 @@ const BodyMap = () => {
                       <strong>Cost:</strong> ${item.cost}
                     </p>
                   </div>
-                </ItemCard>
+                </motion.div>
               );
             })}
           </div>
@@ -314,7 +272,7 @@ const BodyMap = () => {
               </div>
             </div>
           )}
-        </ShopContainer>
+        </motion.div>
       )}
     </div>
   );
