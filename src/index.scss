@@ -1,18 +1,21 @@
 @font-face {
-    font-family: 'manbow';
-    src: url('../public/assets/fonts/ManbowLines.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "manbow";
+  src: url("../public/assets/fonts/ManbowLines.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Steampunk';
-    src: url('../public/assets/fonts/Steam.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Steampunk";
+  src: url("../public/assets/fonts/Steam.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-family: 'Steampunk', sans-serif;
-    background: black;
+  font-family: "Steampunk", sans-serif;
+  background: black;
 }
+
+@import "./components/BodyMap";
+@import "./pages/ShopPage";
