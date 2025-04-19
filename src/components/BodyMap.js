@@ -167,64 +167,10 @@ const BodyMap = () => {
           {/* Scroll Effect */}
           <div className="scrollContainer">
             {shopItems.map((item, index) => {
-              const relativeIndex =
-                (index - currentIndex + shopItems.length) % shopItems.length;
-
-              let positionY, scale, opacity, zIndex;
-              const size = 29; // Ensure uniform height
-
-              if (relativeIndex === 0) {
-                positionY = -70;
-                scale = 0.2;
-                opacity = 1;
-                zIndex = 0; // Top-most item is in front
-              } else if (relativeIndex === 1) {
-                positionY = 40;
-                scale = 1;
-                opacity = 1;
-                zIndex = 5;
-              } else if (relativeIndex === 2) {
-                positionY = 305;
-                scale = 1;
-                opacity = 1;
-                zIndex = 2;
-              } else if (relativeIndex === 3) {
-                positionY = 570;
-                scale = 1;
-                opacity = 1;
-                zIndex = 1;
-              } else if (relativeIndex === 4) {
-                positionY = 730;
-                scale = 0.2;
-                opacity = 1;
-                zIndex = 0;
-              } else {
-                positionY = 760;
-                scale = 0;
-                opacity = 0;
-                zIndex = -1;
-              }
-
-              // 🔧 Ensure last item behaves like all others
-              if (index === shopItems.length - 1 && relativeIndex === 0) {
-                positionY = -70;
-                scale = 0.2;
-                opacity = 1;
-                zIndex = 0;
-              }
-
               return (
                 <motion.div
                   key={index}
                   className="itemCard"
-                  size={size}
-                  active={relativeIndex === 0} // Pass active state for styling
-                  animate={{
-                    y: positionY,
-                    scaleY: scale,
-                    opacity: opacity,
-                    zIndex: zIndex,
-                  }}
                   transition={{ duration: 1 }}
                 >
                   <img
@@ -252,7 +198,7 @@ const BodyMap = () => {
             })}
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Buttons 
           {shopItems.length > 3 && (
             <div className="buttonContainer">
               <div className="arrowBtn" onClick={prevItem}>
@@ -271,7 +217,7 @@ const BodyMap = () => {
                 />
               </div>
             </div>
-          )}
+          )}*/}
         </motion.div>
       )}
     </div>
