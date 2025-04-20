@@ -8,7 +8,7 @@
         "Overcharge": "For 1 minute, your Strength score increases by an additional +4 (to a maximum of 24), and you deal an extra 1d6 force damage on melee weapon attacks. After overcharging, you suffer one level of exhaustion.",
         "cost": 5000,
         "SPU Usage": 5,
-        "image": "pneumatic_arm_enhancment.png"
+        "image": "dleg.png"
       },
       {
         "name": "Pneumatic Arm Enhancement 2",
@@ -17,7 +17,7 @@
         "Overcharge": "For 1 minute, your Strength score increases by an additional +4 (to a maximum of 24), and you deal an extra 1d6 force damage on melee weapon attacks. After overcharging, you suffer one level of exhaustion.",
         "cost": 5000,
         "SPU Usage": 5,
-        "image": "pneumatic_arm_enhancment.png"
+        "image": "dleg.png"
       }  
     ],
     "leg": [
