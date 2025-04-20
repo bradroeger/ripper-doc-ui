@@ -118,12 +118,16 @@
   padding-left: 10px;
   transform-origin: center;
   font-size: 0.9em;
-  //z-index: ${({ active }) =>      active ? 10 : 1}; /* Bring active item to front */
-}
+  margin-bottom: 1rem;
 
-.itemImage {
-  height: 90%;
-  object-fit: contain;
+  .itemImage {
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .itemContent {
+    padding: 1rem;
+  }
 }
 
 .arrowImage {
