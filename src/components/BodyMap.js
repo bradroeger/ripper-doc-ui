@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import augmentationsData from '../assets/augmentations.json';
 
 import BodyPart from './BodyPart';
@@ -7,7 +6,7 @@ import BodyPart from './BodyPart';
 const partDetails = {
   head: {
     position: { isLeft: true, top: '4%', left: '47.1%' },
-    zoomPosition: { scale: 2.5, x: -400, y: 900 },
+    zoomPosition: { scale: 2.5, x: -560, y: 900 },
   },
   hand: {
     position: { top: '18%', left: '31%' },
@@ -31,7 +30,7 @@ const partDetails = {
   },
   arm: {
     position: { top: '22%', left: '55%' },
-    zoomPosition: { scale: 2.5, x: -1350, y: 600 },
+    zoomPosition: { scale: 2.5, x: -1450, y: 600 },
   },
 };
 
@@ -57,21 +56,22 @@ const BodyMap = () => {
     setHiddenParts({});
   };
 
+  const transitionStyle = { transition: '1s', 'ease-in-out': '0.4s' };
+  const bodyAnimStyle = !zoomedPart
+    ? { transform: `translateX(0) translateY(0) scale(1)` }
+    : {
+        transform: `translateX(${partDetails[zoomedPart].zoomPosition.x}px) translateY(${partDetails[zoomedPart].zoomPosition.y}px) scale(${partDetails[zoomedPart].zoomPosition.scale})`,
+      };
+
   return (
     <div className='bodyContainer'>
-      <motion.img
-        className='bodyImage'
-        src='/assets/statue.png'
-        alt='Body'
-        /*animate={zoomedPart ? partDetails[zoomedPart].zoomPosition : { scale: 1, x: 0, y: 0 }}*/
-        transition={{ duration: 0.1, ease: [0.42, 0, 0.58, 1] }}
-      />
+      <img className='bodyImage' src='/assets/statue.png' alt='Body' style={{ ...bodyAnimStyle, ...transitionStyle }} />
 
       {/* Clickable Images */}
       {Object.keys(partDetails).map(
         (partKey) =>
           !hiddenParts[partKey] && (
-            <motion.img
+            <img
               className='clickableImage'
               src='/assets/Select-Box.png'
               style={{
@@ -82,11 +82,11 @@ const BodyMap = () => {
               }}
               onClick={() => handleClick(partKey)}
             />
-          )
+          ),
       )}
 
       {zoomedPart && (
-        <motion.div className='shopContainer' position={shopPosition}>
+        <div className='shopContainer' position={shopPosition}>
           <button className='closeBtn' onClick={closeShop}>
             X
           </button>
@@ -98,7 +98,7 @@ const BodyMap = () => {
               return <BodyPart key={index} item={item} />;
             })}
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   );
